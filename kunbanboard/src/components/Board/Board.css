@@ -28,11 +28,18 @@
 }
 
 .column-header h2 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: #333;
   margin: 0;
   text-align: center;
+}
+
+.kanban-column:hover .column-header h2 {
+  text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #000000;
+  /* color: #553c9a; */
+  color: white;
+  transition: all 0.3s ease;
 }
 
 .tasks-container {
@@ -122,37 +129,11 @@
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .close-modal-btn:hover {
   background-color: #e70000;
-}
-
-.edit-save-button {
-  padding-top: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.edit-btn {
-  background-color: transparent;
-  max-width: 100px;
-  height: 40px;
-  border: none;
-  cursor: pointer;
-  color: #007bff;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.edit-btn i {
-  font-size: 18px;
-}
-
-.edit-btn:hover {
-  color: #0056b3;
 }
 
 @media (max-width: 768px) {
