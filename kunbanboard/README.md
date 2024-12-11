@@ -20,7 +20,7 @@ Ensure you have the following installed on your system:
    Replace `<repository-url>` with the URL of the Git repository.
 3. Navigate into the project directory:
    ```bash
-   cd task-manager
+   cd kunbanboard
    ```
 
 ---
@@ -75,7 +75,7 @@ Ensure you have the following installed on your system:
 
 1. Open the footer component file located in the frontend directory:
    ```bash
-   src/components/Footer.js
+   src/components/Board/Board.jsx
    ```
 2. Modify the desired text or content in the footer.
 3. Save your changes, and the frontend will automatically reload if the development server is running.
@@ -86,7 +86,7 @@ Ensure you have the following installed on your system:
 
 1. Open the `server.js` file located in the backend directory:
    ```bash
-   backend/server.js
+   task-manager-backend/server.js
    ```
 2. Locate the MongoDB connection string and update it:
    ```javascript
