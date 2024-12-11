@@ -20,4 +20,3 @@ export const loadState = () => {
       console.error("Could not save state to localStorage:", err);
     }
   };
-  

@@ -71,7 +71,8 @@ const App = () => {
   return (
     <div className="app">
       <div className="header">
-        <div className='header-div'><h1>Task Manager</h1>
+        <div className='header-div'>
+          <h1>Task Manager</h1>
           <SearchBar onSearch={setSearchQuery} />
         </div>
         <div className="add-task-button-container">

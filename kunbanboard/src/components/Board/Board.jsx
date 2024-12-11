@@ -24,7 +24,6 @@ const Board = ({ tasks, onDragEnd, onDelete }) => {
     setSelectedTask(null);
   };
 
-
   return (
     <div>
       <DragDropContext onDragEnd={onDragEnd}>

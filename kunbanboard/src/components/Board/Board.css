@@ -37,7 +37,6 @@
 
 .kanban-column:hover .column-header h2 {
   text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #000000;
-  /* color: #553c9a; */
   color: white;
   transition: all 0.3s ease;
 }
