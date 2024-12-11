@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# Task Manager Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This guide will help you clone the repository, set up the backend and frontend, and start the application. Additionally, it provides instructions on how to make changes in the footer and update backend MongoDB details.
 
-## Available Scripts
+## Prerequisites
+Ensure you have the following installed on your system:
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- [MongoDB](https://www.mongodb.com/try/download/community) (local or cloud instance)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Cloning the Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Open a terminal and navigate to the directory where you want to clone the project.
+2. Run the following command:
+   ```bash
+   git clone <repository-url>
+   ```
+   Replace `<repository-url>` with the URL of the Git repository.
+3. Navigate into the project directory:
+   ```bash
+   cd task-manager
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Backend Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Navigate to the backend folder:
+   ```bash
+   cd task-manager-backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Update the MongoDB connection string in `server.js`:
+   ```javascript
+   const mongoose = require('mongoose');
 
-### `npm run build`
+   mongoose.connect('<your-mongodb-connection-string>', {
+       useNewUrlParser: true,
+       useUnifiedTopology: true,
+   }).then(() => console.log('Connected to MongoDB')).catch(err => console.error('Error connecting to MongoDB', err));
+   ```
+   Replace `<your-mongodb-connection-string>` with your MongoDB URI.
+4. Start the backend server:
+   ```bash
+   npm start
+   ```
+   The backend will run on `http://localhost:5000` by default.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Frontend Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Navigate to the frontend folder:
+   ```bash
+   cd task-manager-frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the frontend server:
+   ```bash
+   npm start
+   ```
+   The frontend will run on `http://localhost:3000` by default.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Making Changes in the Footer
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Open the footer component file located in the frontend directory:
+   ```bash
+   src/components/Footer.js
+   ```
+2. Modify the desired text or content in the footer.
+3. Save your changes, and the frontend will automatically reload if the development server is running.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Updating MongoDB Details
 
-## Learn More
+1. Open the `server.js` file located in the backend directory:
+   ```bash
+   backend/server.js
+   ```
+2. Locate the MongoDB connection string and update it:
+   ```javascript
+   mongoose.connect('<your-mongodb-connection-string>', {
+       useNewUrlParser: true,
+       useUnifiedTopology: true,
+   });
+   ```
+   Replace `<your-mongodb-connection-string>` with the URI of your MongoDB database.
+3. Restart the backend server to apply changes:
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Running the Full Application
 
-### Code Splitting
+1. Ensure both the backend and frontend servers are running:
+   - Backend: `http://localhost:5000`
+   - Frontend: `http://localhost:3000`
+2. Open your browser and navigate to `http://localhost:3000` to use the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Additional Notes
+- Always ensure MongoDB is running (locally or in the cloud) before starting the backend.
+- Use a `.env` file to securely store sensitive details like the MongoDB URI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy using the Task Manager Application!
